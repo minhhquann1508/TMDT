@@ -13,13 +13,17 @@ root.render(
       <ConfigProvider
         theme={{
           token: {
-            borderRadius: 5,
+            borderRadius: 0,
             colorPrimary: "#000",
             colorLinkHover: "#888888"
           },
           components: {
             Input: {
               activeShadow: false
+            },
+            Breadcrumb: {
+              fontSize: 12,
+              colorBgTextHover: 'none'
             },
           }
         }}

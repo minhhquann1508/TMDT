@@ -19,7 +19,7 @@ export default function SignInButton() {
     return (
         <Fragment>
             <button onClick={showModal} className='font-semibold text-[16px] flex items-center gap-1'><span>Sign In</span><span className='text-[20px]'><icons.userIcon /></span></button>
-            <Modal open={isModalOpen} onOk={handleOk} footer={false} onCancel={handleCancel}>
+            <Modal width={400} open={isModalOpen} onOk={handleOk} footer={false} onCancel={handleCancel}>
                 <div>
                     <header className='text-2xl font-bold mb-5'>
                         Sign In

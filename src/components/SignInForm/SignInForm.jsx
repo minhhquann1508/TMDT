@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Form, Input } from 'antd';
+import { Link } from 'react-router-dom';
 const onFinish = (values) => {
     console.log('Success:', values);
 };
@@ -11,9 +12,6 @@ const SignInForm = () => (
     <Form
         name="basic"
         layout='vertical'
-        labelCol={{
-            span: 8,
-        }}
         style={{
             width: '100%'
         }}
@@ -35,7 +33,7 @@ const SignInForm = () => (
                 }
             ]}
         >
-            <Input size='large' placeholder='Email' />
+            <Input size='large' className='text-[14px]' placeholder='Email' />
         </Form.Item>
 
         <Form.Item
@@ -48,7 +46,7 @@ const SignInForm = () => (
                 }
             ]}
         >
-            <Input.Password size='large' placeholder='Password' />
+            <Input.Password size='large' className='text-[14px]' placeholder='Password' />
         </Form.Item>
 
         <Form.Item
@@ -69,14 +67,16 @@ const SignInForm = () => (
                 }),
             ]}
         >
-            <Input.Password size='large' placeholder='Confirm your password' />
+            <Input.Password size='large' className='text-[14px]' placeholder='Confirm your password' />
         </Form.Item>
 
         <Form.Item>
-            <Button className='w-full' size='large' type="primary" htmlType="submit">
-                Submit
+            <Button className='w-full font-semibold' size='large' type="primary" htmlType="submit">
+                Sign In
             </Button>
         </Form.Item>
+
+        <Link className='underline text-xs font-semibold' to={'/forgot-password'}>Forgot Your Password?</Link>
     </Form>
 );
 export default SignInForm;
